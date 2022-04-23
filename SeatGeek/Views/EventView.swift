@@ -12,10 +12,11 @@ struct EventView: View {
     
     var body: some View {
         HStack {
-            Image(systemName: "square.and.arrow.up")
-                .frame(width: 50, height: 50)
+            AsyncImageView(imageString: event.performers.first?.image)
+            
             VStack(alignment: .leading) {
                 Text(event.title)
+                    .foregroundColor(Color.black)
                     .fontWeight(.heavy)
                     .font(.system(size: 15))
                 Text(event.venue.city)

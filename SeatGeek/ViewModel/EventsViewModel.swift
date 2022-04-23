@@ -9,7 +9,7 @@ import Combine
 import Foundation
 
 class EventsViewModel: ObservableObject {
-    @Published var eventsModel: EventsResponseModel?
+    @Published var publishedEvents: EventsResponseModel?
     let eventFetcher = EventFetcher()
     var subscriptions = Set<AnyCancellable>()
     
@@ -20,7 +20,7 @@ class EventsViewModel: ObservableObject {
     func receiveModelUpdates() {
         eventFetcher.getEvents()
             .sink { model in
-                self.eventsModel = model
+                self.publishedEvents = model
             }
             .store(in: &subscriptions)
     }
