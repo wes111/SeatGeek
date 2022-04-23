@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EventDetailView: View {
     
-    let event: Event
+    let event: SeatGeekEvent
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -20,12 +20,12 @@ struct EventDetailView: View {
             }
             HStack {
                 Spacer()
-                AsyncImageView(imageString: event.performers.first?.image)
+                AsyncImageView(imageString: event.imageName)
                 Spacer()
             }
             
-            Text(event.datetime_utc)
-            Text(event.venue.city)
+            Text(event.dateTime)
+            Text(event.location)
             Spacer()
         }
         .navigationTitle("Details")
@@ -37,13 +37,6 @@ struct EventDetailView: View {
 
 struct EventDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        EventDetailView(event: Event(
-            datetime_utc: "Monday",
-            venue: Event.Venue(
-                state: "MO",
-                city: "Columbia"),
-            title: "Festival",
-            performers: [Event.Performers(image: "bob")]
-        ))
+        EventDetailView(event: SeatGeekEvent.defaultEvent)
     }
 }

@@ -11,14 +11,7 @@ struct EventList: View {
     @StateObject var model = EventsViewModel()
     @State private var queryText = ""
     @State var isShowingDetails = false
-    @State var tappedEvent: Event = Event(
-        datetime_utc: "Monday",
-        venue: Event.Venue(
-            state: "MO",
-            city: "Columbia"),
-        title: "Festival",
-        performers: [Event.Performers(image: "bob")]
-    )
+    @State var tappedEvent = SeatGeekEvent.defaultEvent
     
     init() {
         setUpSearchBarAppearance()
@@ -28,7 +21,7 @@ struct EventList: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(model.publishedEvents?.events ?? []) { event in
+                ForEach(model.publishedEvents ?? []) { event in
                     EventView(event: event)
                         .gesture(
                             TapGesture()

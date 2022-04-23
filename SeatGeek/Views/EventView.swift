@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct EventView: View {
-    let event: Event
+    let event: SeatGeekEvent
     
     var body: some View {
         HStack {
-            AsyncImageView(imageString: event.performers.first?.image)
+            AsyncImageView(imageString: event.imageName)
             
             VStack(alignment: .leading) {
                 Text(event.title)
                     .foregroundColor(Color.black)
                     .fontWeight(.heavy)
                     .font(.system(size: 15))
-                Text(event.venue.city)
+                Text(event.location)
                     .font(.system(size: 10))
                     .foregroundColor(Color.gray)
-                Text(event.datetime_utc)
+                Text(event.dateTime)
                     .font(.system(size: 10))
                     .foregroundColor(Color.gray)
             }
@@ -38,15 +38,7 @@ struct EventView: View {
 // MARK: - Preview
 struct EventView_Previews: PreviewProvider {
     static var previews: some View {
-        EventView(event: Event(
-            datetime_utc: "Monday",
-            venue: Event.Venue(
-                state: "MO",
-                city: "Columbia"),
-            title: "Festival",
-            performers: [Event.Performers(image: "bob")]
-        )
-        )
-        .padding()
+        EventView(event: SeatGeekEvent.defaultEvent)
+            .padding()
     }
 }
