@@ -21,6 +21,7 @@
 		EE9323F32813879C008260E3 /* LinearGradientExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9323F22813879C008260E3 /* LinearGradientExtensions.swift */; };
 		EE9323F528139CC7008260E3 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9323F428139CC7008260E3 /* AsyncImageView.swift */; };
 		EE9323F72814803B008260E3 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9323F62814803B008260E3 /* UIColorExtensions.swift */; };
+		EE9323F928148619008260E3 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9323F828148619008260E3 /* EventDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		EE9323F22813879C008260E3 /* LinearGradientExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradientExtensions.swift; sourceTree = "<group>"; };
 		EE9323F428139CC7008260E3 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		EE9323F62814803B008260E3 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		EE9323F828148619008260E3 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		F355605D41669D09FF26E0D0 /* Pods-SeatGeek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeatGeek.debug.xcconfig"; path = "Target Support Files/Pods-SeatGeek/Pods-SeatGeek.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				EE9323DE28134266008260E3 /* EventView.swift */,
 				EE9323EB281363FA008260E3 /* EventList.swift */,
 				EE9323F428139CC7008260E3 /* AsyncImageView.swift */,
+				EE9323F828148619008260E3 /* EventDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				EE9323E2281348FB008260E3 /* NeumorphicVM.swift in Sources */,
 				EE9323F72814803B008260E3 /* UIColorExtensions.swift in Sources */,
 				EE9323EF281377A4008260E3 /* EventsViewModel.swift in Sources */,
+				EE9323F928148619008260E3 /* EventDetailView.swift in Sources */,
 				EE9323F528139CC7008260E3 /* AsyncImageView.swift in Sources */,
 				EE9323F32813879C008260E3 /* LinearGradientExtensions.swift in Sources */,
 				EE9323D028133DCF008260E3 /* SeatGeekApp.swift in Sources */,

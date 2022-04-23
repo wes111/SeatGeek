@@ -10,6 +10,16 @@ import SwiftUI
 struct EventList: View {
     @StateObject var model = EventsViewModel()
     @State private var queryText = ""
+    @State var isShowingDetails = false
+    @State var tappedEvent: Event = Event(
+        datetime_utc: "Monday",
+        venue: Event.Venue(
+            state: "MO",
+            city: "Columbia"),
+        title: "Festival",
+        performers: [Event.Performers(image: "bob")]
+    )
+    
     init() {
         setUpSearchBarAppearance()
         setUpNavBarAppearance()
@@ -20,8 +30,17 @@ struct EventList: View {
             ScrollView {
                 ForEach(model.publishedEvents?.events ?? []) { event in
                     EventView(event: event)
+                        .gesture(
+                            TapGesture()
+                                .onEnded({ _ in
+                                    tappedEvent = event
+                                    isShowingDetails = true
+                                }))
+                        .padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 10))
+                    NavigationLink(
+                        destination: EventDetailView(event: tappedEvent),
+                        isActive: $isShowingDetails) { EmptyView() }
                 }
-                .padding()
             }
             .navigationTitle("Events")
         }
