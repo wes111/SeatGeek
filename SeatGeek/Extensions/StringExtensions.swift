@@ -9,7 +9,7 @@ import Foundation
 
 extension String {
     
-    // Returns an optional date String in the format 'Fri, 09 Aug 2019 9:15 PM'
+    // Returns an optional date String in the format 'FRI, 09 Aug 2019 9:15 PM'
     // from a String in the format "yyyy'-'MM'-'dd'T'HH':'mm':'ss".
     func formatAsDateTime() -> String? {
         let formatter = DateFormatter()

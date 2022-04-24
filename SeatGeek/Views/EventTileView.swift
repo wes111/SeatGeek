@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EventView: View {
+struct EventTileView: View {
     @Binding var event: SeatGeekEvent
     
     var body: some View {
@@ -47,9 +47,18 @@ struct EventView: View {
 }
 
 // MARK: - Preview
-//struct EventView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        EventView(event: SeatGeekEvent.defaultEvent)
-//            .padding()
-//    }
-//}
+struct EventTileView_Previews: PreviewProvider {
+    struct EventTileViewPreview: View {
+        
+        @State private var event = SeatGeekEvent.defaultEvent
+        
+        var body: some View {
+            EventTileView(event: $event)
+        }
+    }
+    
+    static var previews: some View {
+        EventTileViewPreview()
+            .padding()
+    }
+}

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Possible image styles.
 enum ImageStyle {
     case thumbnail
     case regular

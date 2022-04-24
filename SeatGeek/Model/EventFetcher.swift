@@ -8,7 +8,7 @@
 import Combine
 import Foundation
 
-class EventFetcher {
+struct EventFetcher {
     
     private let baseURL = "https://api.seatgeek.com/2/events?"
     private let clientID = "MjY2Nzk4MDJ8MTY1MDY2NDI0OC4wNTU0NzM2"

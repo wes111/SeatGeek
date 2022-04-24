@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		D3993FD0B5A0EE05466EFDC6 /* Pods_SeatGeek.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C87B384DF0AD10602118B0E /* Pods_SeatGeek.framework */; };
-		EE32BFAC2815AA5100890B06 /* ToggleSysImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE32BFAB2815AA5100890B06 /* ToggleSysImageView.swift */; };
+		EE32BFAC2815AA5100890B06 /* ToggleFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE32BFAB2815AA5100890B06 /* ToggleFavoriteView.swift */; };
+		EE32BFAE2815EA8200890B06 /* FavoriteEventsPersistor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE32BFAD2815EA8100890B06 /* FavoriteEventsPersistor.swift */; };
 		EE6AEFEE2814C36100EA539E /* ImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6AEFED2814C36100EA539E /* ImageExtensions.swift */; };
 		EE6AEFF02814D95100EA539E /* UINavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6AEFEF2814D95000EA539E /* UINavigationControllerExtensions.swift */; };
 		EE9323D028133DCF008260E3 /* SeatGeekApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9323CF28133DCF008260E3 /* SeatGeekApp.swift */; };
 		EE9323D228133DCF008260E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9323D128133DCF008260E3 /* ContentView.swift */; };
 		EE9323D428133DD6008260E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9323D328133DD6008260E3 /* Assets.xcassets */; };
 		EE9323D728133DD6008260E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9323D628133DD6008260E3 /* Preview Assets.xcassets */; };
-		EE9323DF28134266008260E3 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9323DE28134266008260E3 /* EventView.swift */; };
+		EE9323DF28134266008260E3 /* EventTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9323DE28134266008260E3 /* EventTileView.swift */; };
 		EE9323E2281348FB008260E3 /* NeumorphicVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9323E1281348FB008260E3 /* NeumorphicVM.swift */; };
 		EE9323E728135B96008260E3 /* EventFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9323E628135B96008260E3 /* EventFetcher.swift */; };
 		EE9323EA28136358008260E3 /* EventsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9323E928136358008260E3 /* EventsResponseModel.swift */; };
@@ -32,7 +33,8 @@
 /* Begin PBXFileReference section */
 		16FA955F10C94ABEF6EC7030 /* Pods-SeatGeek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeatGeek.release.xcconfig"; path = "Target Support Files/Pods-SeatGeek/Pods-SeatGeek.release.xcconfig"; sourceTree = "<group>"; };
 		5C87B384DF0AD10602118B0E /* Pods_SeatGeek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeatGeek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE32BFAB2815AA5100890B06 /* ToggleSysImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleSysImageView.swift; sourceTree = "<group>"; };
+		EE32BFAB2815AA5100890B06 /* ToggleFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleFavoriteView.swift; sourceTree = "<group>"; };
+		EE32BFAD2815EA8100890B06 /* FavoriteEventsPersistor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEventsPersistor.swift; sourceTree = "<group>"; };
 		EE6AEFED2814C36100EA539E /* ImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtensions.swift; sourceTree = "<group>"; };
 		EE6AEFEF2814D95000EA539E /* UINavigationControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtensions.swift; sourceTree = "<group>"; };
 		EE9323CC28133DCF008260E3 /* SeatGeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeatGeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,7 +42,7 @@
 		EE9323D128133DCF008260E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EE9323D328133DD6008260E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE9323D628133DD6008260E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EE9323DE28134266008260E3 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		EE9323DE28134266008260E3 /* EventTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTileView.swift; sourceTree = "<group>"; };
 		EE9323E1281348FB008260E3 /* NeumorphicVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicVM.swift; sourceTree = "<group>"; };
 		EE9323E628135B96008260E3 /* EventFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFetcher.swift; sourceTree = "<group>"; };
 		EE9323E928136358008260E3 /* EventsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsResponseModel.swift; sourceTree = "<group>"; };
@@ -120,11 +122,11 @@
 		EE9323DD28134233008260E3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EE9323DE28134266008260E3 /* EventView.swift */,
+				EE9323DE28134266008260E3 /* EventTileView.swift */,
 				EE9323EB281363FA008260E3 /* EventList.swift */,
 				EE9323F428139CC7008260E3 /* AsyncImageView.swift */,
 				EE9323F828148619008260E3 /* EventDetailView.swift */,
-				EE32BFAB2815AA5100890B06 /* ToggleSysImageView.swift */,
+				EE32BFAB2815AA5100890B06 /* ToggleFavoriteView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,6 +157,7 @@
 				EE9323E628135B96008260E3 /* EventFetcher.swift */,
 				EE9323E928136358008260E3 /* EventsResponseModel.swift */,
 				EE9323FA281498B9008260E3 /* SeatGeekEvent.swift */,
+				EE32BFAD2815EA8100890B06 /* FavoriteEventsPersistor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,12 +297,13 @@
 				EE9323EC281363FA008260E3 /* EventList.swift in Sources */,
 				EE9323E728135B96008260E3 /* EventFetcher.swift in Sources */,
 				EE6AEFF02814D95100EA539E /* UINavigationControllerExtensions.swift in Sources */,
-				EE9323DF28134266008260E3 /* EventView.swift in Sources */,
-				EE32BFAC2815AA5100890B06 /* ToggleSysImageView.swift in Sources */,
+				EE9323DF28134266008260E3 /* EventTileView.swift in Sources */,
+				EE32BFAC2815AA5100890B06 /* ToggleFavoriteView.swift in Sources */,
 				EE9323D228133DCF008260E3 /* ContentView.swift in Sources */,
 				EE9323EA28136358008260E3 /* EventsResponseModel.swift in Sources */,
 				EE9323E2281348FB008260E3 /* NeumorphicVM.swift in Sources */,
 				EE9323F72814803B008260E3 /* UIColorExtensions.swift in Sources */,
+				EE32BFAE2815EA8200890B06 /* FavoriteEventsPersistor.swift in Sources */,
 				EE9323EF281377A4008260E3 /* EventsViewModel.swift in Sources */,
 				EE9323F928148619008260E3 /* EventDetailView.swift in Sources */,
 				EE9323F528139CC7008260E3 /* AsyncImageView.swift in Sources */,

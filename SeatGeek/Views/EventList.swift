@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Displays a scrollalbe list of events with navigation and search.
 struct EventList: View {
     @StateObject var model = EventsViewModel()
     @State private var queryText = ""
@@ -22,7 +23,7 @@ struct EventList: View {
         NavigationView {
             ScrollView {
                 ForEach($model.publishedEvents) { $event in
-                    EventView(event: $event)
+                    EventTileView(event: $event)
                         .gesture(TapGesture()
                             .onEnded({ _ in
                                 tappedIndex = model.getEventIndex(with: event.id) ?? 0

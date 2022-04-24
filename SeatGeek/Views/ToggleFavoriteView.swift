@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ToggleSysImageView: View {
+struct ToggleFavoriteView: View {
     @EnvironmentObject var model: EventsViewModel
     @Binding var isSelected: Bool
     let imageName: String
@@ -22,29 +22,29 @@ struct ToggleSysImageView: View {
                 .onEnded({ _ in
                     isSelected.toggle()
                     if isSelected {
-                        model.save(id)
+                        model.favoritesPersistor.save(id)
                     } else {
-                        model.delete(id)
+                        model.favoritesPersistor.delete(id)
                     }
                 }))
     }
 }
 
 // MARK: - Preview
-struct ToggleSysImageView_Previews: PreviewProvider {
-    struct ToggleSysImageViewPreview: View {
+struct ToggleFavoriteView_Previews: PreviewProvider {
+    struct ToggleFavoriteViewPreview: View {
+        
         @State private var isSelected = true
-        let imageName = "heart"
         
         var body: some View {
-            ToggleSysImageView(
+            ToggleFavoriteView(
                 isSelected: $isSelected,
-                imageName: imageName,
+                imageName: "heart",
                 id: "bob")
         }
     }
 
     static var previews: some View {
-        ToggleSysImageViewPreview()
+        ToggleFavoriteViewPreview()
     }
 }

@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// The detail view displayed to the user when a SeatGeekEvent
+// is selected in EventList.
 struct EventDetailView: View {
     
     @Binding var event: SeatGeekEvent
@@ -19,15 +21,11 @@ struct EventDetailView: View {
                     .font(.title)
                 Spacer()
                 if event.isFavorite {
-                    ToggleSysImageView(
-                        isSelected: $event.isFavorite,
-                        imageName: "heart.fill",
-                        id: event.id)
+                    ToggleFavoriteView(isSelected: $event.isFavorite,
+                        imageName: "heart.fill", id: event.id)
                 } else {
-                    ToggleSysImageView(
-                        isSelected: $event.isFavorite,
-                        imageName: "heart",
-                        id: event.id)
+                    ToggleFavoriteView(isSelected: $event.isFavorite,
+                        imageName: "heart", id: event.id)
                 }
             }
             HStack {
@@ -52,7 +50,6 @@ struct EventDetailView: View {
         .foregroundColor(.black)
         .padding()
     }
-        
 }
 
 // MARK: - Preview
