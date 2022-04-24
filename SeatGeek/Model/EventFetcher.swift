@@ -16,7 +16,7 @@ class EventFetcher {
     private let eventsSubject = CurrentValueSubject<EventsResponseModel?, Never>(nil)
     
     init() {
-        requestEvents(using: "swift")
+        requestEvents(using: "")
     }
     
     func getEvents() -> AnyPublisher<EventsResponseModel?, Never> {

@@ -14,17 +14,17 @@ struct EventsResponseModel: Decodable {
 }
 
 struct Event: Decodable {
-    let datetime_utc: String
-    let venue: Venue
-    let title: String
-    let performers: [Performers]
+    let datetime_utc: String?
+    let venue: Venue?
+    let title: String?
+    let performers: [Performers]?
     
     struct Venue: Decodable {
-        let state: String
-        let city: String
+        let state: String?
+        let city: String?
     }
     
     struct Performers: Decodable {
-        let image: String
+        let image: String?
     }
 }

@@ -36,7 +36,7 @@ struct EventList: View {
                 }
             }
             .onChange(of: queryText, perform: { newText in
-                print(newText)
+                self.model.submitQuery(newText)
             })
             .navigationTitle("Events")
         }

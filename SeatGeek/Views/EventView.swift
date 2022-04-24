@@ -31,8 +31,6 @@ struct EventView: View {
         }
         .padding()
         .modifier(NeumorphicVM())
-        
-        
     }
 }
 
