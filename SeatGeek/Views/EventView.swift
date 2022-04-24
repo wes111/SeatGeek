@@ -12,19 +12,20 @@ struct EventView: View {
     
     var body: some View {
         HStack {
-            AsyncImageView(imageString: event.imageName)
+            AsyncImageView(imageString: event.imageName,
+                           imageStyle: .thumbnail)
             
             VStack(alignment: .leading) {
                 Text(event.title)
                     .foregroundColor(Color.black)
-                    .fontWeight(.heavy)
-                    .font(.system(size: 15))
+                    .fontWeight(.semibold)
+                    .font(.system(size: 16))
                 Text(event.location)
-                    .font(.system(size: 10))
-                    .foregroundColor(Color.gray)
+                    .font(.system(size: 12))
+                    .foregroundColor(Color(.dsgMedium))
                 Text(event.dateTime)
-                    .font(.system(size: 10))
-                    .foregroundColor(Color.gray)
+                    .font(.system(size: 12))
+                    .foregroundColor(Color(.dsgMedium))
             }
             Spacer()
         }

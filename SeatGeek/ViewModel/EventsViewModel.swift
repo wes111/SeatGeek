@@ -25,6 +25,10 @@ class EventsViewModel: ObservableObject {
             .store(in: &subscriptions)
     }
     
+    func submitQuery(_ query: String) {
+        //eventFetcher.
+    }
+    
     func createSeatGeekEvents(using model: EventsResponseModel?) {
         var seatGeekEvents: [SeatGeekEvent] = []
         if let events = model?.events {

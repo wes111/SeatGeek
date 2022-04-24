@@ -10,8 +10,8 @@ import Foundation
 
 class EventFetcher {
     
-    private let baseURL = "https://api.seatgeek.com/2/events?client_id="
-    private let clientID = "MjY2Nzk4MDJ8MTY1MDY2NDI0OC4wNTU0NzM2&q="
+    private let baseURL = "https://api.seatgeek.com/2/events?"
+    private let clientID = "MjY2Nzk4MDJ8MTY1MDY2NDI0OC4wNTU0NzM2"
     private let decoder = JSONDecoder()
     private let eventsSubject = CurrentValueSubject<EventsResponseModel?, Never>(nil)
     
@@ -23,8 +23,8 @@ class EventFetcher {
         return eventsSubject.eraseToAnyPublisher()
     }
     
-    private func requestEvents(using query: String) {
-        let urlWithQuery = baseURL + clientID + query
+    func requestEvents(using query: String) {
+        let urlWithQuery = "\(baseURL)client_id=\(clientID)&q=\(query)"
         if let url = URL(string: urlWithQuery) {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error) in

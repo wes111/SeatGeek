@@ -23,22 +23,26 @@ struct EventList: View {
             ScrollView {
                 ForEach(model.publishedEvents ?? []) { event in
                     EventView(event: event)
-                        .gesture(
-                            TapGesture()
-                                .onEnded({ _ in
-                                    tappedEvent = event
-                                    isShowingDetails = true
-                                }))
-                        .padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 10))
+                        .gesture(TapGesture()
+                            .onEnded({ _ in
+                                tappedEvent = event
+                                isShowingDetails = true
+                            }))
+                        .padding(EdgeInsets(top: 10, leading: 15,
+                                            bottom: 0, trailing: 10))
                     NavigationLink(
                         destination: EventDetailView(event: tappedEvent),
                         isActive: $isShowingDetails) { EmptyView() }
                 }
             }
+            .onChange(of: queryText, perform: { newText in
+                print(newText)
+            })
             .navigationTitle("Events")
         }
+        .accentColor(.white) // <- Makes back button white.
         .searchable(text: $queryText)
-        .foregroundColor(.white)
+        .foregroundColor(.white) // <- Makes search text white.
     }
 }
 

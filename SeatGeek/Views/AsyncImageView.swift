@@ -7,26 +7,32 @@
 
 import SwiftUI
 
+enum ImageStyle {
+    case thumbnail
+    case regular
+}
+
 struct AsyncImageView: View {
     
     let imageString: String?
+    let imageStyle: ImageStyle
     
     var body: some View {
         if let imageString = imageString,
-        let imageURL = URL(string: imageString) {
+           let imageURL = URL(string: imageString) {
             AsyncImage(
                 url: imageURL,
                 content: { image in
-                    image.resizable()
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 50, height: 50)
-                        .clipped()
-                        .cornerRadius(5)
+                    if imageStyle == .thumbnail {
+                        image
+                            .thumbnailImageModifier()
+                    } else {
+                        image
+                    }
                 },
                 placeholder: {
-                    Image(systemName: "photo")
-                        .frame(width: 50, height: 50)
+                    ProgressView()
+                        .progressViewStyle(.circular)
                 }
             )
         } else {
@@ -38,6 +44,6 @@ struct AsyncImageView: View {
 
 struct AsynImageView_Previews: PreviewProvider {
     static var previews: some View {
-        AsyncImageView(imageString: "https://seatgeek.com/images/performers-landscape/phish-c2ff57/1436/24016/huge.jpg")
+        AsyncImageView(imageString: "https://seatgeek.com/images/performers-landscape/phish-c2ff57/1436/24016/huge.jpg", imageStyle: .regular)
     }
 }
