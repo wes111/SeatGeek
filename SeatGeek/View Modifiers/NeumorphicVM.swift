@@ -22,14 +22,14 @@ struct NeumorphicVM: ViewModifier {
             
             .shadow(
                 color: Color(white: 1.0).opacity(0.9),
-                radius: 18,
-                x: -18,
-                y: -18)
+                radius: 3,
+                x: -3,
+                y: -3)
             .shadow(
-                color: Color.gray.opacity(0.5),
-                radius: 14,
-                x: 14,
-                y: 14)
+                color: Color.gray.opacity(0.7),
+                radius: 3,
+                x: 3,
+                y: 3)
     }
     
 }

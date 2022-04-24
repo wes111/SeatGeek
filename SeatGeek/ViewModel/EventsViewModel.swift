@@ -13,13 +13,9 @@ class EventsViewModel: ObservableObject {
     @Published var publishedEvents: [SeatGeekEvent] = []
     private let eventFetcher = EventFetcher()
     private var subscriptions = Set<AnyCancellable>()
-    
-    let userDefaults = UserDefaults.standard
-    let favoritesKey = "favorites"
-    var storedFavorites: [String]
-    
+    let favoritesPersistor = FavoriteEventsPersistor()
+
     init() {
-        storedFavorites = userDefaults.object(forKey: favoritesKey) as? [String] ?? []
         receiveEvents()
     }
     
@@ -30,18 +26,6 @@ class EventsViewModel: ObservableObject {
             }
         }
         return nil
-    }
-    
-    // Saves the event to userDefaults.
-    func save(_ id: String) {
-        storedFavorites.append(id)
-        userDefaults.set(storedFavorites, forKey: favoritesKey)
-    }
-    
-    // Removes the event from userDefaults.
-    func delete(_ id: String) {
-        storedFavorites = storedFavorites.filter { $0 != id }
-        userDefaults.set(storedFavorites, forKey: favoritesKey)
     }
     
     // Subscribe to events from the eventFetcher.
@@ -64,21 +48,13 @@ class EventsViewModel: ObservableObject {
         if let events = model?.events {
             for event in events {
                 let seatGeekEvent = SeatGeekEvent(apiEvent: event)
-                let updatedEvent = updateFavoriteStatus(for: seatGeekEvent)
+                let updatedEvent = favoritesPersistor.updateFavoriteStatus(
+                    for: seatGeekEvent)
                 seatGeekEvents.append(updatedEvent)
             }
         }
         DispatchQueue.main.async {
             self.publishedEvents = seatGeekEvents
         }
-    }
-    
-    // If an event is favorited in userDefaults, update its status in the app.
-    func updateFavoriteStatus(for event: SeatGeekEvent) -> SeatGeekEvent {
-        var newEvent = event
-        if storedFavorites.contains(event.id) {
-            newEvent.update(isFavorite: true)
-        }
-        return newEvent
     }
 }
