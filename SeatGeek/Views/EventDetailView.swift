@@ -10,7 +10,6 @@ import SwiftUI
 struct EventDetailView: View {
     
     @Binding var event: SeatGeekEvent
-    //var heartName = "heart"
 
     var body: some View {
         VStack(alignment: .leading) {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EventView: View {
-    let event: SeatGeekEvent
+    @Binding var event: SeatGeekEvent
     
     var body: some View {
         
@@ -47,9 +47,9 @@ struct EventView: View {
 }
 
 // MARK: - Preview
-struct EventView_Previews: PreviewProvider {
-    static var previews: some View {
-        EventView(event: SeatGeekEvent.defaultEvent)
-            .padding()
-    }
-}
+//struct EventView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EventView(event: SeatGeekEvent.defaultEvent)
+//            .padding()
+//    }
+//}

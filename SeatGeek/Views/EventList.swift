@@ -11,7 +11,7 @@ struct EventList: View {
     @StateObject var model = EventsViewModel()
     @State private var queryText = ""
     @State var isShowingDetails = false
-    @State var tappedEvent = SeatGeekEvent.defaultEvent
+    @State var tappedIndex: Int = 0
     
     init() {
         setUpSearchBarAppearance()
@@ -21,18 +21,20 @@ struct EventList: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(model.publishedEvents ?? []) { event in
-                    EventView(event: event)
+                ForEach($model.publishedEvents) { $event in
+                    EventView(event: $event)
                         .gesture(TapGesture()
                             .onEnded({ _ in
-                                tappedEvent = event
+                                tappedIndex = model.getEventIndex(with: event.id) ?? 0
                                 isShowingDetails = true
                             }))
                         .padding(EdgeInsets(top: 10, leading: 15,
                                             bottom: 0, trailing: 10))
-                    NavigationLink(
-                        destination: EventDetailView(event: $tappedEvent),
-                        isActive: $isShowingDetails) { EmptyView() }
+                    if !model.publishedEvents.isEmpty {
+                        NavigationLink(
+                            destination: EventDetailView(event: $model.publishedEvents[tappedIndex]),
+                            isActive: $isShowingDetails) { EmptyView() }
+                    }
                 }
             }
             .onChange(of: queryText, perform: { newText in

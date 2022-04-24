@@ -10,12 +10,21 @@ import Foundation
 
 // The app's viewModel.
 class EventsViewModel: ObservableObject {
-    @Published var publishedEvents: [SeatGeekEvent]?
+    @Published var publishedEvents: [SeatGeekEvent] = []
     let eventFetcher = EventFetcher()
     var subscriptions = Set<AnyCancellable>()
     
     init() {
         receiveEvents()
+    }
+    
+    func getEventIndex(with id: UUID) -> Int? {
+        for (index, event) in publishedEvents.enumerated() {
+            if event.id == id {
+                return index
+            }
+        }
+        return nil
     }
     
     // Subscribe to events from the eventFetcher.
