@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D3993FD0B5A0EE05466EFDC6 /* Pods_SeatGeek.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C87B384DF0AD10602118B0E /* Pods_SeatGeek.framework */; };
 		EE32BFAC2815AA5100890B06 /* ToggleFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE32BFAB2815AA5100890B06 /* ToggleFavoriteView.swift */; };
 		EE32BFAE2815EA8200890B06 /* FavoriteEventsPersistor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE32BFAD2815EA8100890B06 /* FavoriteEventsPersistor.swift */; };
+		EE32BFB02815F37700890B06 /* SeatGeekEventPreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE32BFAF2815F37700890B06 /* SeatGeekEventPreviewData.swift */; };
 		EE6AEFEE2814C36100EA539E /* ImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6AEFED2814C36100EA539E /* ImageExtensions.swift */; };
 		EE6AEFF02814D95100EA539E /* UINavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6AEFEF2814D95000EA539E /* UINavigationControllerExtensions.swift */; };
 		EE9323D028133DCF008260E3 /* SeatGeekApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9323CF28133DCF008260E3 /* SeatGeekApp.swift */; };
@@ -31,10 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		16FA955F10C94ABEF6EC7030 /* Pods-SeatGeek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeatGeek.release.xcconfig"; path = "Target Support Files/Pods-SeatGeek/Pods-SeatGeek.release.xcconfig"; sourceTree = "<group>"; };
-		5C87B384DF0AD10602118B0E /* Pods_SeatGeek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeatGeek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE32BFAB2815AA5100890B06 /* ToggleFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleFavoriteView.swift; sourceTree = "<group>"; };
 		EE32BFAD2815EA8100890B06 /* FavoriteEventsPersistor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEventsPersistor.swift; sourceTree = "<group>"; };
+		EE32BFAF2815F37700890B06 /* SeatGeekEventPreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatGeekEventPreviewData.swift; sourceTree = "<group>"; };
 		EE6AEFED2814C36100EA539E /* ImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtensions.swift; sourceTree = "<group>"; };
 		EE6AEFEF2814D95000EA539E /* UINavigationControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtensions.swift; sourceTree = "<group>"; };
 		EE9323CC28133DCF008260E3 /* SeatGeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeatGeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,7 +53,6 @@
 		EE9323F828148619008260E3 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		EE9323FA281498B9008260E3 /* SeatGeekEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatGeekEvent.swift; sourceTree = "<group>"; };
 		EE9323FC2814AA23008260E3 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		F355605D41669D09FF26E0D0 /* Pods-SeatGeek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeatGeek.debug.xcconfig"; path = "Target Support Files/Pods-SeatGeek/Pods-SeatGeek.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,28 +60,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3993FD0B5A0EE05466EFDC6 /* Pods_SeatGeek.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		60D4C34EE7B2518CB91847D0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5C87B384DF0AD10602118B0E /* Pods_SeatGeek.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		EE9323C328133DCF008260E3 = {
 			isa = PBXGroup;
 			children = (
 				EE9323CE28133DCF008260E3 /* SeatGeek */,
 				EE9323CD28133DCF008260E3 /* Products */,
-				F2DC8DEDC471A82DB419FD07 /* Pods */,
-				60D4C34EE7B2518CB91847D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				EE9323D628133DD6008260E3 /* Preview Assets.xcassets */,
+				EE32BFAF2815F37700890B06 /* SeatGeekEventPreviewData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -170,15 +158,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		F2DC8DEDC471A82DB419FD07 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F355605D41669D09FF26E0D0 /* Pods-SeatGeek.debug.xcconfig */,
-				16FA955F10C94ABEF6EC7030 /* Pods-SeatGeek.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -186,11 +165,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE9323DA28133DD6008260E3 /* Build configuration list for PBXNativeTarget "SeatGeek" */;
 			buildPhases = (
-				700E567CD8DB242F31BF8998 /* [CP] Check Pods Manifest.lock */,
 				EE9323C828133DCF008260E3 /* Sources */,
 				EE9323C928133DCF008260E3 /* Frameworks */,
 				EE9323CA28133DCF008260E3 /* Resources */,
-				7F3F80B162124CEC9A022E8A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,48 +223,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		700E567CD8DB242F31BF8998 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SeatGeek-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7F3F80B162124CEC9A022E8A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SeatGeek/Pods-SeatGeek-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SeatGeek/Pods-SeatGeek-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SeatGeek/Pods-SeatGeek-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		EE9323C828133DCF008260E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -298,6 +233,7 @@
 				EE9323E728135B96008260E3 /* EventFetcher.swift in Sources */,
 				EE6AEFF02814D95100EA539E /* UINavigationControllerExtensions.swift in Sources */,
 				EE9323DF28134266008260E3 /* EventTileView.swift in Sources */,
+				EE32BFB02815F37700890B06 /* SeatGeekEventPreviewData.swift in Sources */,
 				EE32BFAC2815AA5100890B06 /* ToggleFavoriteView.swift in Sources */,
 				EE9323D228133DCF008260E3 /* ContentView.swift in Sources */,
 				EE9323EA28136358008260E3 /* EventsResponseModel.swift in Sources */,
@@ -433,7 +369,6 @@
 		};
 		EE9323DB28133DD6008260E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F355605D41669D09FF26E0D0 /* Pods-SeatGeek.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -463,7 +398,6 @@
 		};
 		EE9323DC28133DD6008260E3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16FA955F10C94ABEF6EC7030 /* Pods-SeatGeek.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
