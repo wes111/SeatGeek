@@ -15,20 +15,22 @@ struct SeatGeekEvent: Identifiable {
     let location: String
     let imageName: String?
     
-    init(event: Event) {
-        self.title = event.title
-        self.dateTime = event.datetime_utc.formatAsDateTime() ?? "Date Unavailable"
-        self.location = "\(event.venue.city), \(event.venue.state)"
-        if !event.performers.isEmpty {
-            self.imageName =  event.performers[0].image
+    init(apiEvent: Event) {
+        self.title = apiEvent.title ?? "Title Unavailable"
+        self.dateTime = apiEvent.datetime_utc?.formatAsDateTime() ?? "Date Unavailable"
+        self.location =
+        """
+        \(apiEvent.venue?.city ?? "City Unavailable"), \
+        \(apiEvent.venue?.state ?? "State Unavailable")
+        """
+        if let imageName = apiEvent.performers?.first?.image {
+            self.imageName = imageName
         } else {
             self.imageName = nil
         }
     }
-    
-    
-    
-    static let defaultEvent = SeatGeekEvent(event: Event(
+
+    static let defaultEvent = SeatGeekEvent(apiEvent: Event(
         datetime_utc: "Monday",
         venue: Event.Venue(
             state: "MO",

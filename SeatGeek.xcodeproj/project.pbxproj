@@ -24,7 +24,7 @@
 		EE9323F528139CC7008260E3 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9323F428139CC7008260E3 /* AsyncImageView.swift */; };
 		EE9323F72814803B008260E3 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9323F62814803B008260E3 /* UIColorExtensions.swift */; };
 		EE9323F928148619008260E3 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9323F828148619008260E3 /* EventDetailView.swift */; };
-		EE9323FB281498B9008260E3 /* SeatGeekEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9323FA281498B9008260E3 /* SeatGeekEvent.swift */; };
+		EE9323FB281498B9008260E3 /* newSeatGeekEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9323FA281498B9008260E3 /* newSeatGeekEvent.swift */; };
 		EE9323FD2814AA23008260E3 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9323FC2814AA23008260E3 /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +48,7 @@
 		EE9323F428139CC7008260E3 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		EE9323F62814803B008260E3 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		EE9323F828148619008260E3 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
-		EE9323FA281498B9008260E3 /* SeatGeekEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatGeekEvent.swift; sourceTree = "<group>"; };
+		EE9323FA281498B9008260E3 /* newSeatGeekEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newSeatGeekEvent.swift; sourceTree = "<group>"; };
 		EE9323FC2814AA23008260E3 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		F355605D41669D09FF26E0D0 /* Pods-SeatGeek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeatGeek.debug.xcconfig"; path = "Target Support Files/Pods-SeatGeek/Pods-SeatGeek.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,7 +151,7 @@
 			children = (
 				EE9323E628135B96008260E3 /* EventFetcher.swift */,
 				EE9323E928136358008260E3 /* EventsResponseModel.swift */,
-				EE9323FA281498B9008260E3 /* SeatGeekEvent.swift */,
+				EE9323FA281498B9008260E3 /* newSeatGeekEvent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,7 +302,7 @@
 				EE9323FD2814AA23008260E3 /* StringExtensions.swift in Sources */,
 				EE9323F32813879C008260E3 /* LinearGradientExtensions.swift in Sources */,
 				EE9323D028133DCF008260E3 /* SeatGeekApp.swift in Sources */,
-				EE9323FB281498B9008260E3 /* SeatGeekEvent.swift in Sources */,
+				EE9323FB281498B9008260E3 /* newSeatGeekEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
