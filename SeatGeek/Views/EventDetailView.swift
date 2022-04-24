@@ -21,11 +21,13 @@ struct EventDetailView: View {
                 if event.isFavorite {
                     ToggleSysImageView(
                         isSelected: $event.isFavorite,
-                        imageName: "heart.fill")
+                        imageName: "heart.fill",
+                        id: event.id)
                 } else {
                     ToggleSysImageView(
                         isSelected: $event.isFavorite,
-                        imageName: "heart")
+                        imageName: "heart",
+                        id: event.id)
                 }
             }
             HStack {

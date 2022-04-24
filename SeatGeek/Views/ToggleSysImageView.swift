@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ToggleSysImageView: View {
+    @EnvironmentObject var model: EventsViewModel
     @Binding var isSelected: Bool
     let imageName: String
+    let id: String
     
     var body: some View {
         Image(systemName: imageName)
@@ -19,6 +21,11 @@ struct ToggleSysImageView: View {
             .gesture(TapGesture()
                 .onEnded({ _ in
                     isSelected.toggle()
+                    if isSelected {
+                        model.save(id)
+                    } else {
+                        model.delete(id)
+                    }
                 }))
     }
 }
@@ -32,7 +39,8 @@ struct ToggleSysImageView_Previews: PreviewProvider {
         var body: some View {
             ToggleSysImageView(
                 isSelected: $isSelected,
-                imageName: imageName)
+                imageName: imageName,
+                id: "bob")
         }
     }
 

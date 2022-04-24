@@ -45,6 +45,7 @@ struct EventList: View {
         .accentColor(.white) // <- Makes back button white.
         .searchable(text: $queryText)
         .foregroundColor(.white) // <- Makes search text white.
+        .environmentObject(model)
     }
 }
 

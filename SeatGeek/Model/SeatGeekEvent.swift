@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SeatGeekEvent: Identifiable {
     
-    let id = UUID()
+    let id: String
     let title: String
     let dateTime: String
     let location: String
@@ -31,6 +31,11 @@ struct SeatGeekEvent: Identifiable {
             self.imageName = nil
         }
         self.isFavorite = false
+        self.id = self.title + self.dateTime
+    }
+    
+    mutating func update(isFavorite: Bool) {
+        self.isFavorite = isFavorite
     }
 
     static let defaultEvent = SeatGeekEvent(apiEvent: Event(
