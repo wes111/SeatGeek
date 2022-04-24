@@ -31,7 +31,7 @@ struct EventList: View {
                         .padding(EdgeInsets(top: 10, leading: 15,
                                             bottom: 0, trailing: 10))
                     NavigationLink(
-                        destination: EventDetailView(event: tappedEvent),
+                        destination: EventDetailView(event: $tappedEvent),
                         isActive: $isShowingDetails) { EmptyView() }
                 }
             }

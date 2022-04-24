@@ -9,7 +9,8 @@ import SwiftUI
 
 struct EventDetailView: View {
     
-    let event: SeatGeekEvent
+    @Binding var event: SeatGeekEvent
+    //var heartName = "heart"
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -18,10 +19,15 @@ struct EventDetailView: View {
                     .fontWeight(.semibold)
                     .font(.title)
                 Spacer()
-                Image(systemName: "heart")
-                    .resizable()
-                    .foregroundColor(.red)
-                    .frame(width: 30, height: 25)
+                if event.isFavorite {
+                    ToggleSysImageView(
+                        isSelected: $event.isFavorite,
+                        imageName: "heart.fill")
+                } else {
+                    ToggleSysImageView(
+                        isSelected: $event.isFavorite,
+                        imageName: "heart")
+                }
             }
             HStack {
                 Spacer()
@@ -48,8 +54,18 @@ struct EventDetailView: View {
         
 }
 
+// MARK: - Preview
 struct EventDetailView_Previews: PreviewProvider {
+    
+    struct EventDetailViewPreview: View {
+        @State private var event = SeatGeekEvent.defaultEvent
+        
+        var body: some View {
+            EventDetailView(event: $event)
+        }
+    }
+    
     static var previews: some View {
-        EventDetailView(event: SeatGeekEvent.defaultEvent)
+        EventDetailViewPreview()
     }
 }

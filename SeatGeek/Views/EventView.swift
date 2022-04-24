@@ -11,25 +11,37 @@ struct EventView: View {
     let event: SeatGeekEvent
     
     var body: some View {
-        HStack {
-            AsyncImageView(imageString: event.imageName,
-                           imageStyle: .thumbnail)
+        
+        ZStack(alignment: .topLeading) {
             
-            VStack(alignment: .leading) {
-                Text(event.title)
-                    .foregroundColor(Color.black)
-                    .fontWeight(.semibold)
-                    .font(.system(size: 16))
-                Text(event.location)
-                    .font(.system(size: 12))
-                    .foregroundColor(Color(.dsgMedium))
-                Text(event.dateTime)
-                    .font(.system(size: 12))
-                    .foregroundColor(Color(.dsgMedium))
+            HStack {
+                AsyncImageView(imageString: event.imageName,
+                               imageStyle: .thumbnail)
+                
+                VStack(alignment: .leading) {
+                    Text(event.title)
+                        .foregroundColor(Color.black)
+                        .fontWeight(.semibold)
+                        .font(.system(size: 16))
+                    Text(event.location)
+                        .font(.system(size: 12))
+                        .foregroundColor(Color(.dsgMedium))
+                    Text(event.dateTime)
+                        .font(.system(size: 12))
+                        .foregroundColor(Color(.dsgMedium))
+                }
+                Spacer()
             }
-            Spacer()
+            .padding()
+            if event.isFavorite {
+                Image(systemName: "heart.fill")
+                    .resizable()
+                    .foregroundColor(.red)
+                    .frame(width: 18, height: 15)
+                    .padding(EdgeInsets(top: 10, leading: 7,
+                                        bottom: 0, trailing: 10))
+            }
         }
-        .padding()
         .modifier(NeumorphicVM())
     }
 }

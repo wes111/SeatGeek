@@ -15,6 +15,8 @@ struct SeatGeekEvent: Identifiable {
     let location: String
     let imageName: String?
     
+    var isFavorite: Bool
+    
     init(apiEvent: Event) {
         self.title = apiEvent.title ?? "Title Unavailable"
         self.dateTime = apiEvent.datetime_utc?.formatAsDateTime() ?? "Date Unavailable"
@@ -28,6 +30,7 @@ struct SeatGeekEvent: Identifiable {
         } else {
             self.imageName = nil
         }
+        self.isFavorite = false
     }
 
     static let defaultEvent = SeatGeekEvent(apiEvent: Event(
