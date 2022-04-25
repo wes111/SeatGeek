@@ -1,4 +1,4 @@
-# SeatGeek Coding Challengs - SwiftUI
+# SeatGeek Coding Challenge - SwiftUI
 
 ### Summary:
 Your challenge is to write a small, focused native mobile app which provides a type-ahead
@@ -38,7 +38,7 @@ below (Search Results with Favorites)
 3. Favorited results should be saved between launches of the app (i.e. this data should be
 persisted)
 
-## Requirement Assumptions:
+## Requirements Assumptions:
 
 1.  **Heart button location**: Based on the provided comp, it is unclear whether the heart button
 in the EventTileView should have its location tied to the tile or to the image. The difference
